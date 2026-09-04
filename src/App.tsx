@@ -17,15 +17,6 @@ import {
 
 type Filter = 'All' | Track
 
-const trackAbbreviations: Record<Track, string> = {
-  Chronicle: 'CHR',
-  Concrete: 'CON',
-  Crypt: 'CRY',
-  Credit: 'CRE',
-  Clutch: 'CLU',
-  Charge: 'CHA',
-}
-
 function ProjectCard({ project }: { project: Project }) {
   return (
     <article
@@ -35,7 +26,7 @@ function ProjectCard({ project }: { project: Project }) {
     >
       <div className="project-card__meta">
         <span>{String(project.id).padStart(2, '0')}</span>
-        <span>{trackAbbreviations[project.track]}</span>
+        <span>{project.code}</span>
       </div>
       <div className="project-card__body">
         <div className="project-card__track">
@@ -47,6 +38,17 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
         <h3>{project.title}</h3>
         <p className="project-card__description">{project.description}</p>
+        <details className="project-card__details">
+          <summary>
+            Inside the brief
+            <ArrowDownRight aria-hidden="true" size={17} />
+          </summary>
+          <ul>
+            {project.highlights.map((highlight) => (
+              <li key={highlight}>{highlight}</li>
+            ))}
+          </ul>
+        </details>
       </div>
       <div className="project-card__footer">
         <ul aria-label="Skills and themes">
@@ -72,8 +74,10 @@ function App() {
       const matchesTrack = activeFilter === 'All' || project.track === activeFilter
       const searchable = [
         project.title,
+        project.code,
         project.description,
         project.track,
+        ...project.highlights,
         ...project.tags,
       ]
         .join(' ')
@@ -84,6 +88,7 @@ function App() {
   }, [activeFilter, deferredQuery])
 
   const clearSearch = () => setQuery('')
+  const lastProjectNumber = String(projects.length).padStart(2, '0')
 
   return (
     <div className="site-shell">
@@ -129,10 +134,10 @@ function App() {
           <aside className="hero-index" aria-label="Project catalog summary">
             <div className="hero-index__header">
               <span>Project index</span>
-              <span>01—21</span>
+              <span>01—{lastProjectNumber}</span>
             </div>
             <div className="hero-index__number" aria-hidden="true">
-              21
+              {projects.length}
             </div>
             <div className="hero-index__tracks">
               {tracks.map((track) => (
@@ -161,7 +166,7 @@ function App() {
           </div>
           <div className="tracks__heading">
             <h2 id="tracks-title">
-              Six ways in. <em>No wrong door.</em>
+              Eight ways in. <em>No wrong door.</em>
             </h2>
             <p>
               Pick the kind of problem that keeps your brain switched on. Each track
@@ -198,7 +203,7 @@ function App() {
           <div className="project-section__heading">
             <h2 id="projects-title">A closer look at the briefs.</h2>
             <p>
-              This selection spans six tracks. Search by the tools you want to learn,
+              This selection spans {tracks.length} tracks. Search by the tools you want to learn,
               or filter by the kind of problem you want to understand.
             </p>
           </div>

@@ -9,6 +9,8 @@
   --credit: #b8a8d9;
   --clutch: #f4a755;
   --charge: #f2df9d;
+  --catalyst: #d9b0d8;
+  --create: #9eb8ff;
   --white: #fffef8;
   --line: 1.5px solid var(--ink);
   --page-gutter: clamp(1rem, 3.25vw, 3.75rem);
@@ -334,6 +336,7 @@ button {
   border-right: 1px solid rgba(17, 17, 15, 0.62);
   border-bottom: 1px solid rgba(17, 17, 15, 0.62);
   color: var(--ink);
+  background: var(--track-color);
   font-family: var(--font-mono);
   font-size: 0.6rem;
   text-transform: uppercase;
@@ -656,6 +659,46 @@ button {
   line-height: 1.52;
 }
 
+.project-card__details {
+  margin-top: 1.25rem;
+  border-top: 1px solid rgba(17, 17, 15, 0.36);
+}
+
+.project-card__details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  font-family: var(--font-mono);
+  font-size: 0.61rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  list-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.project-card__details summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-card__details summary svg {
+  transition: transform 180ms ease-out;
+}
+
+.project-card__details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.project-card__details ul {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0 0 1rem 1.1rem;
+  font-size: 0.78rem;
+  line-height: 1.42;
+}
+
 .project-card__footer {
   display: flex;
   align-items: flex-end;
@@ -710,6 +753,16 @@ button {
 .track-charge {
   --track-color: var(--charge);
   --card-color: var(--charge);
+}
+
+.track-catalyst {
+  --track-color: var(--catalyst);
+  --card-color: var(--catalyst);
+}
+
+.track-create {
+  --track-color: var(--create);
+  --card-color: var(--create);
 }
 
 .empty-state {
