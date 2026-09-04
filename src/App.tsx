@@ -172,55 +172,6 @@ function ProjectDetail({ project }: { project: Project }) {
               </ul>
             </section>
 
-            {project.people && project.people.length > 0 && (
-              <section className="detail-people" aria-labelledby="people-title">
-                <div className="section-kicker">
-                  <span>02</span>
-                  <span>The people guiding it</span>
-                </div>
-                <div className="detail-people__heading">
-                  <h2 id="people-title">Project heads & leads.</h2>
-                  <p>
-                    Names come from the supplied project briefs. LinkedIn notes only appear where the
-                    public profile matched the ISTE NITK identity clearly.
-                  </p>
-                </div>
-                <div className="people-grid">
-                  {project.people.map((person) => (
-                    <article className="person-card" key={person.name}>
-                      <div className="person-card__top">
-                        <span className="person-card__initials" aria-hidden="true">
-                          {person.name
-                            .split(' ')
-                            .slice(0, 2)
-                            .map((part) => part[0])
-                            .join('')}
-                        </span>
-                        {person.linkedinUrl && (
-                          <a
-                            href={person.linkedinUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label={`${person.name} on LinkedIn`}
-                          >
-                            <ExternalLink aria-hidden="true" size={19} />
-                          </a>
-                        )}
-                      </div>
-                      <p className="person-card__role">{person.role}</p>
-                      <h3>{person.name}</h3>
-                      {person.standoutFact && (
-                        <p className="person-card__fact">
-                          <span>LinkedIn find</span>
-                          {person.standoutFact}
-                        </p>
-                      )}
-                    </article>
-                  ))}
-                </div>
-              </section>
-            )}
-
             <section className="detail-why" aria-labelledby="why-title">
               <p className="detail-label">Why join this project</p>
               <h2 id="why-title">You won’t just read about it. You’ll help make the decisions.</h2>
@@ -244,6 +195,56 @@ function ProjectDetail({ project }: { project: Project }) {
                 Explore the other briefs
                 <ArrowRight aria-hidden="true" size={20} />
               </a>
+            </div>
+          </section>
+        )}
+
+        {project.people && project.people.length > 0 && (
+          <section className="detail-people" aria-labelledby="people-title">
+            <div className="section-kicker">
+              <span>02</span>
+              <span>The people guiding it</span>
+            </div>
+            <div className="detail-people__heading">
+              <h2 id="people-title">Project heads & leads.</h2>
+              <p>
+                Names come from the supplied project briefs and roster. Phone numbers and private
+                contact details are not shown. LinkedIn notes only appear where the public profile
+                matched the ISTE NITK identity clearly.
+              </p>
+            </div>
+            <div className="people-grid">
+              {project.people.map((person) => (
+                <article className="person-card" key={person.name}>
+                  <div className="person-card__top">
+                    <span className="person-card__initials" aria-hidden="true">
+                      {person.name
+                        .split(' ')
+                        .slice(0, 2)
+                        .map((part) => part[0])
+                        .join('')}
+                    </span>
+                    {person.linkedinUrl && (
+                      <a
+                        href={person.linkedinUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${person.name} on LinkedIn`}
+                      >
+                        <ExternalLink aria-hidden="true" size={19} />
+                      </a>
+                    )}
+                  </div>
+                  <p className="person-card__role">{person.role}</p>
+                  <h3>{person.name}</h3>
+                  {person.standoutFact && (
+                    <p className="person-card__fact">
+                      <span>LinkedIn find</span>
+                      {person.standoutFact}
+                    </p>
+                  )}
+                </article>
+              ))}
             </div>
           </section>
         )}

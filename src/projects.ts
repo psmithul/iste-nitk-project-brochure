@@ -61,6 +61,10 @@ const projectBriefs: Project[] = [
     tags: ['Carbon Capture', 'Process Design', 'Circularity'],
     detailsAvailable: true,
     featured: true,
+    people: [
+      { name: 'Antara Dongre', role: 'Project lead' },
+      { name: 'Aysha K C', role: 'Project head' },
+    ],
   },
   {
     id: 2,
@@ -76,6 +80,10 @@ const projectBriefs: Project[] = [
     ],
     tags: ['ANSYS Fluent', 'EV Thermal', 'Biomimicry'],
     detailsAvailable: true,
+    people: [
+      { name: 'Pranjali', role: 'Project lead' },
+      { name: 'Abhishek Mahato', role: 'Project head' },
+    ],
   },
   {
     id: 3,
@@ -92,7 +100,7 @@ const projectBriefs: Project[] = [
     tags: ['Process Control', 'DWSIM', 'MPC'],
     detailsAvailable: true,
     people: [
-      { name: 'Nandini', role: 'Project head' },
+      { name: 'Nandini Eswaran', role: 'Project lead' },
       { name: 'Greeshma', role: 'Project head' },
     ],
   },
@@ -110,6 +118,10 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Thermodynamics', 'Process Modelling', 'Control'],
     detailsAvailable: true,
+    people: [
+      { name: 'Chowhan Deepak', role: 'Project lead' },
+      { name: 'John', role: 'Project head' },
+    ],
   },
   {
     id: 5,
@@ -126,6 +138,7 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Fault Detection', 'Machine Learning', 'Process Systems'],
     detailsAvailable: true,
+    people: [{ name: 'Rudransh Pandey', role: 'Project lead' }],
   },
   {
     id: 6,
@@ -142,12 +155,16 @@ const projectBriefs: Project[] = [
     tags: ['Battery Systems', 'Embedded', 'Power Electronics'],
     detailsAvailable: true,
     featured: true,
+    people: [
+      { name: 'Sanjeetha S', role: 'Project lead' },
+      { name: 'Afrah Hajira', role: 'Project head' },
+    ],
   },
   {
     id: 7,
     code: 'CHARGE02',
     track: 'Charge',
-    title: 'SPECTRA: Event-Stream SRAM-CIM for Edge Vision',
+    title: 'SRAM Forge: Event-Stream SRAM-CIM for Edge Vision',
     description:
       'Explore compute-in-memory hardware for sparse event-camera data, keeping temporal state close to SRAM to reduce data movement and energy use.',
     highlights: [
@@ -157,6 +174,7 @@ const projectBriefs: Project[] = [
     ],
     tags: ['VLSI', 'Compute-in-Memory', 'Edge Vision'],
     detailsAvailable: true,
+    people: [{ name: 'Rhea', role: 'Project lead' }],
   },
   {
     id: 8,
@@ -172,6 +190,10 @@ const projectBriefs: Project[] = [
     ],
     tags: ['RISC-V', 'SystemVerilog', 'Computer Architecture'],
     detailsAvailable: true,
+    people: [
+      { name: 'Devendranath R', role: 'Project lead' },
+      { name: 'Sai Abhinay', role: 'Project head' },
+    ],
   },
   {
     id: 9,
@@ -187,6 +209,10 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Analog IC', 'SKY130', 'ML for EDA'],
     detailsAvailable: true,
+    people: [
+      { name: 'Shreyash', role: 'Project lead' },
+      { name: 'Chinmay', role: 'Project head' },
+    ],
   },
   {
     id: 10,
@@ -202,6 +228,10 @@ const projectBriefs: Project[] = [
     ],
     tags: ['RTOS', 'ARM Cortex-M4', 'Embedded C'],
     detailsAvailable: true,
+    people: [
+      { name: 'Rohini', role: 'Project lead' },
+      { name: 'Swetha', role: 'Project head' },
+    ],
   },
   {
     id: 7,
@@ -218,6 +248,10 @@ const projectBriefs: Project[] = [
     tags: ['Creative Writing', 'Editorial', 'Illustration'],
     detailsAvailable: true,
     featured: true,
+    people: [
+      { name: 'B. Dhilleswari', role: 'Project lead' },
+      { name: 'Hitee', role: 'Project head' },
+    ],
   },
   {
     id: 8,
@@ -233,6 +267,7 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Computing History', 'HCI', 'Web Development'],
     detailsAvailable: true,
+    people: [{ name: 'Nithin Teja', role: 'Project lead' }],
   },
   {
     id: 9,
@@ -248,12 +283,16 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Animation', 'Storyboarding', 'Visual Design'],
     detailsAvailable: true,
+    people: [
+      { name: 'Kalyani', role: 'Project lead' },
+      { name: 'Alphin', role: 'Project head' },
+    ],
   },
   {
     id: 10,
     code: 'CHRONICLE03',
     track: 'Chronicle',
-    title: 'What Does a Good Life Mean?',
+    title: 'What Does Success Mean to You?',
     description:
       'Interview people across the NITK community to understand how age, background and experience reshape the meaning of a good life.',
     highlights: [
@@ -267,7 +306,7 @@ const projectBriefs: Project[] = [
       { name: 'Deekshitha U M', role: 'Project lead' },
       {
         name: 'Kruthika C S',
-        role: 'Project lead',
+        role: 'Project head',
         linkedinUrl: 'https://in.linkedin.com/in/kruthikacs29',
         standoutFact:
           'Built a low-cost portable evaporative cold-storage prototype that brought its chamber from 33°C to about 27°C using water, airflow and repurposed materials.',
@@ -298,7 +337,7 @@ const projectBriefs: Project[] = [
     id: 13,
     code: 'CLUTCH01',
     track: 'Clutch',
-    title: 'Harvesting Wasted Mechanical Energy from Vehicles',
+    title: 'Regenerative Speed Breaker Energy Harvester',
     description:
       'Recover a portion of vehicle motion at a speed breaker and convert it into useful electrical power for nearby low-energy infrastructure.',
     highlights: [
@@ -323,7 +362,7 @@ const projectBriefs: Project[] = [
       },
       {
         name: 'Yaagh Aiyappa',
-        role: 'Project head',
+        role: 'Project lead',
         linkedinUrl: 'https://in.linkedin.com/in/yaaghaiyappa',
         standoutFact:
           'A Mechanical Engineering student who cleared GATE 2026 in Electronics and Communication Engineering with AIR 2217.',
@@ -344,6 +383,10 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Mechanism Design', 'UAV Retrieval', 'Prototyping'],
     detailsAvailable: true,
+    people: [
+      { name: 'Siddharth Mohan', role: 'Project lead' },
+      { name: 'Shravani J Jogottu', role: 'Project head' },
+    ],
   },
   {
     id: 14,
@@ -372,14 +415,14 @@ const projectBriefs: Project[] = [
     detailsAvailable: true,
     featured: true,
     people: [
-      { name: 'Molly', role: 'Project head' },
       {
         name: 'Grishma Mohan Kadangot',
-        role: 'Project head',
+        role: 'Project lead',
         linkedinUrl: 'https://in.linkedin.com/in/grishma-mohan-kadangot-543490312',
         standoutFact:
           'Her public project feed spotlights sustainable 3D concrete printing, including a formwork-free bench prototype shown at NITK’s Project Expo.',
       },
+      { name: 'Molly Samadhiya', role: 'Project head' },
       { name: 'Tagnata', role: 'Project head' },
       { name: 'Bharath', role: 'Project head' },
     ],
@@ -409,9 +452,9 @@ const projectBriefs: Project[] = [
     tags: ['GIS', 'Hydrology', 'SewerGEMS'],
     detailsAvailable: true,
     people: [
-      { name: 'Vansh', role: 'Project head' },
+      { name: 'Vansh Goyal', role: 'Project lead' },
       { name: 'Vineesh', role: 'Project head' },
-      { name: 'Saish', role: 'Project head' },
+      { name: 'Saish Patil', role: 'Project head' },
     ],
   },
   {
@@ -429,7 +472,7 @@ const projectBriefs: Project[] = [
     tags: ['ETABS', 'Optimization', 'Seismic Design'],
     detailsAvailable: true,
     people: [
-      { name: 'Omair Ahamed J', role: 'Project head' },
+      { name: 'Omair Ahmed J', role: 'Project lead' },
       { name: 'Vismaya K K', role: 'Project head' },
     ],
   },
@@ -447,6 +490,10 @@ const projectBriefs: Project[] = [
     ],
     tags: ['PLAXIS 2D', 'STAAD.Pro', 'Geotechnical'],
     detailsAvailable: true,
+    people: [
+      { name: 'Bhagyavanti', role: 'Project lead' },
+      { name: 'Revanasiddesh', role: 'Project head' },
+    ],
   },
   {
     id: 20,
@@ -475,7 +522,7 @@ const projectBriefs: Project[] = [
     detailsAvailable: true,
     featured: true,
     people: [
-      { name: 'Aditya', role: 'Project head' },
+      { name: 'Aditya Gireesh', role: 'Project lead' },
       { name: 'Chris', role: 'Project head' },
       { name: 'Yeshuraj', role: 'Project head' },
       {
@@ -502,6 +549,10 @@ const projectBriefs: Project[] = [
     tags: ['Product', 'Growth', 'Partnerships'],
     detailsAvailable: true,
     featured: true,
+    people: [
+      { name: 'Shashank', role: 'Project lead' },
+      { name: 'Joseph V Francis', role: 'Project head' },
+    ],
   },
   {
     id: 23,
@@ -527,6 +578,10 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Markets', 'Statistics', 'Dashboard'],
     detailsAvailable: true,
+    people: [
+      { name: 'Diya', role: 'Project lead' },
+      { name: 'Banni Atharva', role: 'Project head' },
+    ],
   },
   {
     id: 25,
@@ -543,7 +598,7 @@ const projectBriefs: Project[] = [
     tags: ['Venture Capital', 'Strategy', 'Analytics'],
     detailsAvailable: true,
     people: [
-      { name: 'Adi', role: 'Project head' },
+      { name: 'Adi', role: 'Project lead' },
       { name: 'Jay', role: 'Project head' },
       { name: 'Diya', role: 'Project head' },
     ],
@@ -583,7 +638,7 @@ const projectBriefs: Project[] = [
     id: 29,
     code: 'CRYPT03',
     track: 'Crypt',
-    title: 'Tunnel Forge',
+    title: 'TunnelForge',
     description:
       'Build a secure reverse-tunnelling platform that exposes local services through reliable relays, then stress it with failure and replay scenarios.',
     highlights: [
@@ -593,6 +648,10 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Go', 'Networking', 'Distributed Systems'],
     detailsAvailable: true,
+    people: [
+      { name: 'Thota Bhavya', role: 'Project lead' },
+      { name: 'Mili Dholaria', role: 'Project head' },
+    ],
   },
   {
     id: 30,
@@ -613,6 +672,10 @@ const projectBriefs: Project[] = [
     highlights: [],
     tags: ['Brief pending'],
     detailsAvailable: false,
+    people: [
+      { name: 'Rahul Javalagi', role: 'Project lead' },
+      { name: 'Santosh Gouda', role: 'Project head' },
+    ],
   },
   {
     id: 32,
@@ -628,12 +691,13 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Real-time Web', 'Rust/WASM', 'Judge0'],
     detailsAvailable: true,
+    people: [{ name: 'Aryan Sharma', role: 'Project lead' }],
   },
   {
     id: 33,
     code: 'CRYPT05',
     track: 'Crypt',
-    title: 'Mini — Cursor',
+    title: 'Mini Cursor',
     description:
       'Develop a repository-aware coding agent that maps unfamiliar codebases, retrieves task-specific context and makes controlled, test-verified edits.',
     highlights: [
@@ -643,6 +707,10 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Developer Tools', 'Tree-sitter', 'Agents'],
     detailsAvailable: true,
+    people: [
+      { name: 'Umar Farooq', role: 'Project lead' },
+      { name: 'Pranav', role: 'Project head' },
+    ],
   },
   {
     id: 34,
@@ -658,12 +726,16 @@ const projectBriefs: Project[] = [
     ],
     tags: ['Local LLMs', 'Data Pipelines', 'Automation'],
     detailsAvailable: true,
+    people: [
+      { name: 'Aryan Bokolia', role: 'Project lead' },
+      { name: 'Sannapuri Rohit', role: 'Project head' },
+    ],
   },
   {
     id: 35,
     code: 'CRYPT01',
     track: 'Crypt',
-    title: 'URL Phishing Detection System',
+    title: 'PhishGuard: URL Phishing Detection System',
     description:
       'Build an explainable phishing detector that combines fast URL screening with deeper domain analysis, isolated investigation and community threat signals.',
     highlights: [
@@ -674,6 +746,7 @@ const projectBriefs: Project[] = [
     tags: ['Cybersecurity', 'XGBoost', 'Browser Automation'],
     detailsAvailable: true,
     featured: true,
+    people: [{ name: 'Harsha B', role: 'Project lead' }],
   },
 ]
 
