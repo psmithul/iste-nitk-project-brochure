@@ -45,7 +45,7 @@ export const trackDescriptions: Record<Track, string> = {
 const comingSoon =
   'This project is part of the current ISTE NITK roster. Its complete brief, learning path and expected deliverables are being prepared.'
 
-export const projects: Project[] = [
+const projectBriefs: Project[] = [
   {
     id: 1,
     code: 'CATALYST03',
@@ -142,6 +142,66 @@ export const projects: Project[] = [
     tags: ['Battery Systems', 'Embedded', 'Power Electronics'],
     detailsAvailable: true,
     featured: true,
+  },
+  {
+    id: 7,
+    code: 'CHARGE02',
+    track: 'Charge',
+    title: 'SPECTRA: Event-Stream SRAM-CIM for Edge Vision',
+    description:
+      'Explore compute-in-memory hardware for sparse event-camera data, keeping temporal state close to SRAM to reduce data movement and energy use.',
+    highlights: [
+      'Represent sparse visual changes as compact x, y, time and polarity event packets',
+      'Design and simulate an event-native SRAM compute-in-memory macro in ngspice',
+      'Co-simulate Verilog control with transistor-level sensing and measure energy, delay and robustness',
+    ],
+    tags: ['VLSI', 'Compute-in-Memory', 'Edge Vision'],
+    detailsAvailable: true,
+  },
+  {
+    id: 8,
+    code: 'CHARGE03',
+    track: 'Charge',
+    title: 'RISC-V SoC',
+    description:
+      'Create a working system-on-chip around a 32-bit RV32I processor core, from the instruction datapath and AXI memory interface to peripherals and bare-metal software.',
+    highlights: [
+      'Implement and verify a single-cycle RV32I core in SystemVerilog',
+      'Add instruction and data caches with GPIO, UART, I²C, CLINT and PLIC support',
+      'Bring up bare-metal C software, compliance tests and JTAG/OpenOCD debugging on FPGA',
+    ],
+    tags: ['RISC-V', 'SystemVerilog', 'Computer Architecture'],
+    detailsAvailable: true,
+  },
+  {
+    id: 9,
+    code: 'CHARGE04',
+    track: 'Charge',
+    title: 'Digitally Tunable gm-C Low-Pass Filter in SKY130 & ML-Driven EDA Automation',
+    description:
+      'Design a digitally tunable analogue low-pass filter around a folded-cascode OTA, then accelerate weak-inversion transistor sizing with a learned EDA surrogate.',
+    highlights: [
+      'Design and characterize a folded-cascode OTA and gm-C filter in the SKY130 process',
+      'Tune transconductance with a four-bit current-steering DAC while preserving closed-loop stability',
+      'Automate ngspice sizing in Python and train an ANN surrogate for rapid design-space exploration',
+    ],
+    tags: ['Analog IC', 'SKY130', 'ML for EDA'],
+    detailsAvailable: true,
+  },
+  {
+    id: 10,
+    code: 'CHARGE05',
+    track: 'Charge',
+    title: 'miniRTOS: A Bare-Metal Real-Time Operating System Kernel for ARM Cortex-M4',
+    description:
+      'Write a real-time operating-system kernel from scratch for the STM32F407 and prove its behaviour with measured context-switch, jitter and deadline data.',
+    highlights: [
+      'Implement SysTick and PendSV context switching with priority-based pre-emption',
+      'Add priority-inheritance mutexes, semaphores, queues, event flags and static memory management',
+      'Measure execution time, latency and jitter with DWT while running a five-task hardware demonstration',
+    ],
+    tags: ['RTOS', 'ARM Cortex-M4', 'Embedded C'],
+    detailsAvailable: true,
   },
   {
     id: 7,
@@ -601,6 +661,11 @@ export const projects: Project[] = [
     featured: true,
   },
 ]
+
+export const projects: Project[] = projectBriefs.map((project, index) => ({
+  ...project,
+  id: index + 1,
+}))
 
 export const trackCounts = tracks.reduce(
   (counts, track) => {
