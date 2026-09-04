@@ -332,6 +332,21 @@ const projectBriefs: Project[] = [
   },
   {
     id: 14,
+    code: 'CLUTCH02',
+    track: 'Clutch',
+    title: 'Enemy Drone Retrieval Launching Mechanism',
+    description:
+      'Design and prototype a reusable, net-based launcher intended to intercept and recover small UAVs without destroying them, using CAD-led mechanism selection and controlled testing.',
+    highlights: [
+      'Compare spring, elastic and pneumatic launch concepts before selecting a safe reusable mechanism',
+      'Develop the structure, deployment system and recovery approach through CAD and engineering analysis',
+      'Build a working prototype and evaluate launch consistency, capture behaviour and soft recovery',
+    ],
+    tags: ['Mechanism Design', 'UAV Retrieval', 'Prototyping'],
+    detailsAvailable: true,
+  },
+  {
+    id: 14,
     code: 'CLUTCH05',
     track: 'Clutch',
     title: 'Adaptive Ergonomic Workstation',

@@ -363,7 +363,7 @@ function HomePage() {
         </section>
 
         <section className="manifesto" aria-label="Our project philosophy">
-          <p>Thirty-nine current projects.</p>
+          <p>Forty current projects.</p>
           <p>Eight ways to find the kind of problem you want to help solve.</p>
         </section>
 
