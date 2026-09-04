@@ -1,6 +1,6 @@
 # Club Project Showcase
 
-A responsive public brochure presenting 29 upcoming ISTE NITK projects across eight tracks. The project index, descriptions and expandable brief details are reconciled from the club's current project documents for potential junior members.
+A responsive public brochure presenting 35 current ISTE NITK projects across eight tracks. Every project has its own detail route: supplied briefs include the full learning path and verified project-head information, while projects without a completed brief are clearly marked “Details coming soon.”
 
 Live site: https://club-project-showcase.vercel.app
 
